@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import HistoryList from '../components/HistoryList'
 import SearchBar from '../components/SearchBar'
 
 
@@ -19,6 +20,7 @@ export default function Home() {
 <div className="mt-[10%]   flex justify-center ">
   <SearchBar/>
 </div>
+<HistoryList/>
     </div>
   )
 
