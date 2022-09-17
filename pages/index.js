@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Header from '../components/Header'
 import HistoryList from '../components/HistoryList'
 import SearchBar from '../components/SearchBar'
 
