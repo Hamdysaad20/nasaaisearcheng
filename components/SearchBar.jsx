@@ -4,13 +4,21 @@ import Loader from '../components/Loader'
 
 function SearchBar() {
   const [click ,setClick] = useState(true)
-    return (
+const [input,setInput] = useState("")
+
+
+
+function handleChange(event) {
+  setInput(event.target.value);
+}
+  return (
   <div className='max-w-3xl relative  w-[90%]'>
         <div className='w-full mx-auto flex justify-center'><Loader /> </div>
       <div className='relative'>
   
-
         <input 
+        id="input_search"
+        onChange={handleChange}
          style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} 
         onClick={()=>{
             setClick(!click)
@@ -25,6 +33,8 @@ required
 />
 <SearchIcon/>
     </div>
+
+
   </div>
   )
 }

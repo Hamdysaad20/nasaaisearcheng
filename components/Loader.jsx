@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from "lottie-react";
-import groovyWalkAnimation from "../public/Images/nasaSplash.json";
+import groovyWalkAnimation from "../public/Images/nasa.json";
 function Loader() {
   return (
     <div>

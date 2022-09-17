@@ -14,7 +14,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
-<Header/>
 
 
 <div className="mt-[10%]   flex justify-center ">

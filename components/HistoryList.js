@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image"
 function HistoryList() {
 
-    let History = [{
+    const History = [{
         
         image:"../public/Images/nasa.gif",
         title:" test title text text-table sdds",
