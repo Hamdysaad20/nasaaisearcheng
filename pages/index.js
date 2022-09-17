@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
 
-<div className="mt-[10%]   flex justify-center ">
+<div className="mt-[9%]   flex justify-center ">
   <SearchBar/>
 </div>
 <HistoryList/>
