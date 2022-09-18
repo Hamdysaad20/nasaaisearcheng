@@ -19,6 +19,9 @@ export default function Home() {
   <SearchBar/>
 </div>
 <HistoryList/>
+
+
+
     </div>
   )
 

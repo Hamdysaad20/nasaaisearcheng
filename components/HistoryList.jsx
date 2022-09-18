@@ -8,9 +8,9 @@ import History from "../json/History"
 
 
   return (
-    <div className="h-[300px]">
+    <div className="h-[300px] mb-12 ">
 <div className=" h-full">
-    <div className="gap-2 flex-wrap px-1 mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
+    <div className="gap-2 pb-12 flex-wrap px-1 mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
  
     {History.sort(() => 0.5 - Math.random()).slice(0,6).map((item, i) => (
         <div key={i} className="overflow-hidden bg-gray-700/20   text-gray-400 flex backdrop-blur-md cursor-pointer hover:scale-[1.02] shadow-lg duration-500  mt-2 w-[400px] rounded-md h-[160px]">

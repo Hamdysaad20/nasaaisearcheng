@@ -1,18 +1,16 @@
 import React ,{useState} from 'react'
 import SearchIcon from './SearchIcon'
 import Loader from '../components/Loader'
-
 function SearchBar() {
   const [click ,setClick] = useState(true)
 const [input,setInput] = useState("")
-
 
 
 function handleChange(event) {
   setInput(event.target.value);
 }
   return (
-  <div className='max-w-3xl relative  w-[90%]'>
+  <div className='max-w-3xl  relative  w-[90%]'>
         <div className='w-full mx-auto flex justify-center'><Loader /> </div>
       <div className='relative'>
   
@@ -31,7 +29,9 @@ minLength={1} maxLength={90}
 
 required
 />
-<SearchIcon/>
+<SearchIcon onClick={(SearchInputToBackend,input)=>{
+input = input;
+}}/>
     </div>
 
 

@@ -1,6 +1,0 @@
-const SearchinputBackend =[
-    {
-        input:"text",
-        
-    }
-]

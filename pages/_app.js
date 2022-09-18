@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
 import '../styles/globals.css'
+import Footer from './../components/Footer';
 
 function MyApp({ Component, pageProps}) {
   useEffect(() => {
@@ -12,7 +13,24 @@ function MyApp({ Component, pageProps}) {
 }, []);
 
   return (
-    <Component   {...pageProps }  />
+   <> <Component   {...pageProps }  />
+   <article id="wrap">
+ <article id="lightings">
+     <section id="one">
+           <section id="two">
+               <section id="three">
+                   <section id="four">
+                       <section id="five">
+                           
+                       </section>
+                   </section>
+               </section>
+           </section>
+   </section>
+   </article>
+</article>
+<Footer />
+</>
 )
 }
 
