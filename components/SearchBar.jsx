@@ -11,7 +11,7 @@ function handleChange(event) {
 }
   return (
   <div className='max-w-3xl  relative  w-[90%]'>
-        <div className='w-full mx-auto flex justify-center'><Loader /> </div>
+        <div className='w-full hover:scale-95 duration-1000 mx-auto flex justify-center'><Loader /> </div>
       <div className='relative'>
   
         <input 
