@@ -5,6 +5,7 @@ import  Head  from 'next/head';
 import Lottie from "lottie-react";
 
 import groovyWalkAnimation from "../public/Images/nasa.json";
+import Filtering from '../components/Filtering';
 function Search() {
   let router= useRouter();
   const  pid  = router.asPath;
@@ -47,7 +48,7 @@ function Search() {
         
         </main>
         <div className="pt-[70px] md:pt-[100px]">
-       {val}
+       <Filtering/>
        </div>      
     </div>
   )
