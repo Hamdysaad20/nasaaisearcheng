@@ -9,6 +9,7 @@ function Loader() {
     <div>
                 <div className='lg:ml-12  w-[300px]  cursor-pointer scale-90 hover:opacity-95 '>
             <Lottie
+            setspeed={2}
             lottieRef={lottieRef}
              animationData={groovyWalkAnimation} 
              />

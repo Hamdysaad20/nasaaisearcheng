@@ -1,7 +1,21 @@
 
-import { useEffect } from 'react';
+import React , { useEffect } from 'react';
 import '../styles/globals.css'
 import Footer from './../components/Footer';
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from 'react-redux'
+import dataReducer from "../features/MyStore";
+
+
+
+
+
+
+
+
+
+
+
 
 function MyApp({ Component, pageProps}) {
   useEffect(() => {
@@ -12,8 +26,19 @@ function MyApp({ Component, pageProps}) {
     }
 }, []);
 
+
+const store = configureStore({
+    reducer: {
+      theStore: dataReducer,
+    },
+  });
   return (
-   <> <Component   {...pageProps }  />
+   <> 
+
+   <Provider store={store}>
+   <Component   {...pageProps }  />
+   </Provider>
+
    <article id="wrap">
  <article id="lightings">
      <section id="one">

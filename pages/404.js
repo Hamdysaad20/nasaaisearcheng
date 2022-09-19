@@ -9,7 +9,7 @@ function Four0Foure() {
        <div className="z-10 top-0 absolute sm:mt-[1px] mt-[20%] w-[100%] md:w-[60%]  justify-center flex mx-auto  ">
         <Lottie
              animationData={groovyWalkAnimation} 
-setSpeed={2}
+setspeed={1}
              />
              
              
@@ -24,7 +24,7 @@ setSpeed={2}
               aria-label="Our Services"
               className='select-none font-bold max-w-sm  bg-white mt-4 sm:mt-0 shadow-md  hover:shadow-red-500/50  ring-2  ring-slate-900 hover:bg-gray-300 focus:outline-none focus:ring-2 opacity-90  focus:ring-offset-2 active:scale-95 duration-100 0  text-gray-900  h-12 px-3  sm:px-16 rounded-lg w-full flex items-center justify-center sm:w-auto highlight-white/20 '
               href={"/"}
-              passHref>
+              >
             Go Home 
             </a>
           </div>
