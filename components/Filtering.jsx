@@ -12,11 +12,7 @@ function Filtering() {
     <div  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="h-screen dd ">
         <div  id="filtering" className="  pt-2 fixed   gap-1 md:flex-col md:overflow-x-hidden overflow-y-hidden overflow-auto    w-full md:w-36 max-w-4xl flex justify-between px-2   ">
         <a herf={ pew.replace(pew.match(/\(([^)]+)\)/) ,"all")}>
-        <label onClick={()=>{
-          pew.replace(pew.match(/\(([^)]+)\)/) ,"all")
-
-
-        }} htmlFor='radio1' className={`${"h-9 gap-2 w-full cursor-pointer  place-content-center grid-flow-col grid hover:bg-gray-700/20 backdrop-md rounded-md"}${pew.includes("?=(all)?=")?"border-b-red-500 border-b-4":null}`}>
+        <label  htmlFor='radio1' className={`${"h-9 gap-2 w-full cursor-pointer  place-content-center grid-flow-col grid hover:bg-gray-700/20 backdrop-md rounded-md"}${pew.includes("?=(all)?=")?"border-b-red-500 border-b-4":null}`}>
         <svg width="20" height="20" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M0.25 10C0.25 4.61522 4.61522 0.25 10 0.25C15.3848 0.25 19.75 4.61522 19.75 10C19.75 15.3848 15.3848 19.75 10 19.75C4.61522 19.75 0.25 15.3848 0.25 10ZM18.5303 17.4697C18.2374 17.1768 17.7626 17.1768 17.4697 17.4697C17.1768 17.7626 17.1768 18.2374 17.4697 18.5303L19.4697 20.5303C19.7626 20.8232 20.2374 20.8232 20.5303 20.5303C20.8232 20.2374 20.8232 19.7626 20.5303 19.4697L18.5303 17.4697Z" fill="white"/>
 </svg>
@@ -24,13 +20,26 @@ function Filtering() {
               <h1 className="">Home</h1>
               </label>
               </a>
+
+
+
+
+
+
               <Link herf={pew.replace(regexvar ,"images")}>
                 <a>s</a>
               </Link>
+
+
+
+
+
+
+
+
+
               <a>
-              <label onClick={()=>{
-              Router.push(  pew.replace(pew.match(/\(([^)]+)\)/) ,"images"))
-        }} htmlFor='radio2'  className={`${"h-9 gap-2 w-full cursor-pointer  place-content-center grid-flow-col grid hover:bg-gray-700/20 backdrop-md rounded-md"}${pew.includes("?=(images)?=")?"border-b-red-500 border-b-4":null}`}>
+              <label  htmlFor='radio2'  className={`${"h-9 gap-2 w-full cursor-pointer  place-content-center grid-flow-col grid hover:bg-gray-700/20 backdrop-md rounded-md"}${pew.includes("?=(images)?=")?"border-b-red-500 border-b-4":null}`}>
               <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M11 0.25H10.9622C9.12495 0.249995 7.69502 0.249991 6.55249 0.353543C5.39182 0.458738 4.45433 0.675516 3.625 1.15433C2.59887 1.74676 1.74676 2.59887 1.15433 3.625C0.675516 4.45433 0.458738 5.39182 0.353543 6.55249C0.249991 7.69502 0.249995 9.12495 0.25 10.9622V11V11.0378C0.249995 12.875 0.249991 14.305 0.353543 15.4475C0.458738 16.6082 0.675516 17.5457 1.15433 18.375C1.74676 19.4011 2.59887 20.2532 3.625 20.8457C4.45433 21.3245 5.39182 21.5413 6.55249 21.6465C7.69502 21.75 9.12494 21.75 10.9621 21.75H11H11.0379C12.8751 21.75 14.305 21.75 15.4475 21.6465C16.6082 21.5413 17.5457 21.3245 18.375 20.8457C19.4011 20.2532 20.2532 19.4011 20.8457 18.375C21.3245 17.5457 21.5413 16.6082 21.6465 15.4475C21.75 14.305 21.75 12.8751 21.75 11.0379V11V10.9621C21.75 9.12494 21.75 7.69502 21.6465 6.55249C21.5413 5.39182 21.3245 4.45433 20.8457 3.625C20.2532 2.59887 19.4011 1.74676 18.375 1.15433C17.5457 0.675516 16.6082 0.458738 15.4475 0.353543C14.305 0.249991 12.875 0.249995 11.0378 0.25H11ZM17 7C17 8.10457 16.1046 9 15 9C13.8954 9 13 8.10457 13 7C13 5.89543 13.8954 5 15 5C16.1046 5 17 5.89543 17 7ZM19.6409 15.8285C19.7508 15.9383 19.8024 16.0946 19.7722 16.247C19.6693 16.7679 19.525 17.1624 19.3301 17.5C18.8913 18.2601 18.2601 18.8913 17.5 19.3301C16.9814 19.6295 16.3288 19.8094 15.2895 19.9036C14.2365 19.999 12.8876 20 11 20C9.11235 20 7.76349 19.999 6.71044 19.9036C5.67115 19.8094 5.01857 19.6295 4.49999 19.3301C3.73989 18.8913 3.1087 18.2601 2.66986 17.5C2.58147 17.3469 2.53727 17.2704 2.50662 17.0969C2.47774 16.9335 2.51501 16.6503 2.58522 16.4999C2.65971 16.3403 2.76101 16.239 2.96361 16.0364L2.96362 16.0364L5.21305 13.787C6.52848 12.4716 7.1862 11.8138 8.00597 11.8078C8.82573 11.8017 9.49309 12.4497 10.8278 13.7455L12.9818 15.8368C13.2615 16.1084 13.7075 16.1051 13.9832 15.8294L13.9832 15.8294C15.3171 14.4954 15.9841 13.8285 16.8125 13.8285C17.6409 13.8285 18.3076 14.4951 19.6409 15.8284L19.6409 15.8285Z" fill="white"/>
 </svg>
@@ -40,7 +49,7 @@ function Filtering() {
               </label>
               </a>
 
-              <button herf={pew.replace( regexvar,"videos")}>
+              <Link herf={pew.replace( regexvar,"videos")}>
 <a>
               <label  htmlFor='radio3'  className={`${"h-9 gap-2 w-full cursor-pointer  place-content-center grid-flow-col grid hover:bg-gray-700/20 backdrop-md rounded-md"}${pew.includes("?=(videos)?=")?"border-b-red-500 border-b-4":null}`}>
              <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +59,7 @@ function Filtering() {
               <h1 className="">Videos</h1>
               </label>
               </a>
-              </button>
+              </Li>
 
         </div>
     </div>
