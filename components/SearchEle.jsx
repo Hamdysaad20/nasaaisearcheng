@@ -28,7 +28,7 @@ let router= useRouter;
    <form onSubmit={(e)=>{
       e.preventDefault();
 
-  let herf= "/Search"+"?="+inputDafultVal ;
+  let herf= "/Search"+"?="+"("+"all"+")"+"?="+inputDafultVal ;
   router.push(herf)
 }}      >
    <input   

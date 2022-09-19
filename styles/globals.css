@@ -9,7 +9,16 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+	
 }
+.filtering::-webkit-scrollbar {
+  display: none;
+}
+.filtering{
+	-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
 @font-face {
   font-family: "Poppins-Bold";
@@ -312,3 +321,32 @@ box-shadow: 0 0 250px 20px #42F2A1;
 
 to { box-shadow: 0 0 100px 15px #F4F6AD; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

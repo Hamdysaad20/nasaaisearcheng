@@ -5,10 +5,10 @@ import groovyWalkAnimation from "../public/Images/nasa.json";
 function Loader() {
   const lottieRef = useRef();
 
-  function hoverevent(){
+  async function hoverevent(){
    lottieRef.current.setSpeed(7)
   }
-  function hovereventends(){
+ async function hovereventends(){
    lottieRef.current.setSpeed(1)
 
   }
