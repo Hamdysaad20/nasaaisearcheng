@@ -12,7 +12,7 @@ function Search() {
    const lottieRef = useRef();
 
    function hoverevent(){
-    lottieRef.current.setSpeed(3)
+    lottieRef.current.setSpeed(7)
    }
    function hovereventends(){
     lottieRef.current.setSpeed(1)
@@ -30,23 +30,23 @@ function Search() {
 
 
         <main>
-          <div className="fixed w-full"><div className='h-full  md:flex max-w-4xl w-[90%] justify-center  flex mt-3  md:mx-0  mx-auto '>
-          <div className='lg:ml-12  w-[100px]  cursor-pointer scale-90 hover:opacity-95 '>      
+          <div className="fixed w-full pb-2 bg-gray-700/20 h-16 md:h-24 backdrop-blur-md"><div className='h-full  md:flex max-w-4xl w-[90%] justify-center  flex mt-1  md:mx-0  mx-auto '>
+          <div className='lg:ml-12 w-[80px]  md:w-[100px]  cursor-pointer scale-90 hover:opacity-95 '>      
       <Lottie
       onMouseOver={hoverevent}
       onMouseLeave={hovereventends}
-            setspeed={2}
+          
             lottieRef={lottieRef}
              animationData={groovyWalkAnimation} 
              />
       </div>
-       <div className="w-full mt-5"> <SearchEle inputDafultVal={val}  /></div>
+       <div className="w-full mt-2 md:mt-5"> <SearchEle inputDafultVal={val}  /></div>
         </div></div>
        
 
         
         </main>
-        <div className="pt-[100px]">
+        <div className="pt-[70px] md:pt-[100px]">
        {val}
        </div>      
     </div>
