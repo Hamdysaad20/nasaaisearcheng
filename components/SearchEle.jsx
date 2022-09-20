@@ -20,7 +20,7 @@ let router= useRouter;
 
 
 
-
+let ru = "/Search?"
     
   return (
     <div><div className='relative'>
@@ -28,7 +28,7 @@ let router= useRouter;
    <form onSubmit={(e)=>{
       e.preventDefault();
 
-  let herf= "/Search"+"?="+"("+"all"+")"+"?="+inputDafultVal ;
+  let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal ;
   router.push(herf)
 }}      >
    <input   

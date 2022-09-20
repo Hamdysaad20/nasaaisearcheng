@@ -10,7 +10,7 @@ import FullsearchList from '../components/FullsearchList';
 function Search() {
   let router= useRouter();
   const  pid  = router.asPath;
-   let val = pid.slice(router.asPath.lastIndexOf("?=")+2); 
+   let val = pid.slice(router.asPath.lastIndexOf("%3F")+2);
    const lottieRef = useRef();
 
    function hoverevent(){

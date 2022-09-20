@@ -2,7 +2,9 @@ import React from 'react'
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../public/Images/404.json";
 import Header from './../components/Header';
+import {useRouter} from"next/router"
 function Four0Foure() {
+  const router= useRouter();
   return (
     <div className="h-screen w-full ">
        <Header/>
@@ -19,6 +21,7 @@ setspeed={1}
              <div className="  mt-[110%] sm:mt-[100%] lg:ml-[600px] lg:mt-[20%]    justify-center flex mx-auto  ">
           <div>
           <h1 className="text-white text-4xl font-bold ">Page Not Found - <span className="text-red-500"> 404 Error </span></h1>
+          <p>{router.pathname}</p>
           <p className="max-w-lg m-2 text-gray-400  text-2xl">SORRY BUT THE PAGE YOU ARE LOOKING FOR DOES NOT EXIST, HAVE BEEN REMOVED. NAME CHANGED OR IS TEMPORARILY UNAVAILABLE</p>
              <a
               aria-label="Our Services"
