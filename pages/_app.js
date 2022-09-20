@@ -9,8 +9,13 @@ import dataReducer from "../features/MyStore";
 
 
 
-
-
+function SafeHydrate({ children }) {
+  return (
+    <div suppressHydrationWarning>
+      {typeof window === 'undefined' ? null : children}
+    </div>
+  )
+}
 
 
 
@@ -34,9 +39,11 @@ const store = configureStore({
   });
   return (
    <> 
-
    <Provider store={store}>
+   <SafeHydrate>
+
    <Component   {...pageProps }  />
+   </SafeHydrate>
    </Provider>
 
    <article id="wrap">
