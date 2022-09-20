@@ -4,8 +4,8 @@ import ImagesSearchAll from './ImagesSearchAll'
 function FullsearchList(props) {
   return (
     <div>
-        <div className="  w-full h-screen">
-            <div className=" max-w-7xl w-[100%] md:pt-28 md:ml-36 h-screen pt-32 px-1 ">
+        <div className="  w-full max-w-[1980px] h-screen">
+            <div className=" max-w-[1380px]  md:pt-28 md:ml-36 h-screen pt-32 px-1 ">
                 <div  className=" font-thin text-gray-300">About {props.resultLength} results ({(Math.random() * 3).toFixed(2)} seconds) </div>
             <div className="bg-gray-700/20  mt-2 backdrop-md w-full rounded-lg   max-h-32 ">
 <div className="p-1">
@@ -18,7 +18,7 @@ function FullsearchList(props) {
 </div>
             </div>
 
-            <ImagesSearchAll/>
+            <ImagesSearchAll Title={"Marc Sell\u00e9s Llim\u00f3s is the first american on the moon"}/>
             </div>
         </div>
     </div>

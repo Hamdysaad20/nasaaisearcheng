@@ -8,7 +8,7 @@ function Filtering() {
   let ru= "Search?"
   return (
     <div  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="h-screen dd ">
-        <div  id="filtering" className=" select-none pt-2 fixed   gap-1 md:flex-col md:overflow-x-hidden overflow-y-hidden overflow-auto    w-full md:w-36 max-w-4xl flex justify-between px-2   ">
+        <div  id="filtering" className=" z-50 bg-gray-700/40 md:bg-gray-900 backdrop-md select-none pt-2 fixed   gap-1 md:flex-col md:overflow-x-hidden overflow-y-hidden overflow-auto    w-full md:w-36 max-w-4xl flex justify-between px-2   ">
       
         <label onClick={() => {
         router.push(
