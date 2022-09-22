@@ -70,12 +70,14 @@ input{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #090d18;
+	background: #11182c;
+
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #11182c;
+  background: #090d18;
+
 }
 
 /* Handle on hover */
