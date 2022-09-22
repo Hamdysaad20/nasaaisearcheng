@@ -4,7 +4,11 @@ import  {useRouter}  from 'next/router';
 function Filtering() {
   let router= useRouter(); 
   let pew = router.asPath
-  let regexvar= pew.match(/\(([^)]+)\)/)[1];
+  try{
+  var regexvar= pew.match(/\(([^)]+)\)/)[1];
+}catch(e){
+  
+}
   let ru= "Search?"
   return (
     <div  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="h-screen dd ">
