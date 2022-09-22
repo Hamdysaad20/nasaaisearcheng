@@ -21,8 +21,10 @@ setspeed={1}
              <div className="  mt-[110%] sm:mt-[100%] lg:ml-[600px] lg:mt-[20%]    justify-center flex mx-auto  ">
           <div>
           <h1 className="text-white text-4xl font-bold ">Page Not Found - <span className="text-red-500"> 404 Error </span></h1>
-          <p>{router.pathname}</p>
+          <p className="text-xl text-gray-200 pt-2"></p>
           <p className="max-w-lg m-2 text-gray-400  text-2xl">SORRY BUT THE PAGE YOU ARE LOOKING FOR DOES NOT EXIST, HAVE BEEN REMOVED. NAME CHANGED OR IS TEMPORARILY UNAVAILABLE</p>
+          <p className="text-xl text-gray-200 pt-2"></p>
+
              <a
               aria-label="Our Services"
               className='select-none font-bold max-w-sm  bg-white mt-4 sm:mt-0 shadow-md  hover:shadow-red-500/50  ring-2  ring-slate-900 hover:bg-gray-300 focus:outline-none focus:ring-2 opacity-90  focus:ring-offset-2 active:scale-95 duration-100 0  text-gray-900  h-12 px-3  sm:px-16 rounded-lg w-full flex items-center justify-center sm:w-auto highlight-white/20 '
@@ -30,7 +32,9 @@ setspeed={1}
               >
             Go Home 
             </a>
+         
           </div>
+          
              </div>
 
 
