@@ -8,6 +8,7 @@ import groovyWalkAnimation from "../public/Images/nasa.json";
 
 import Filtering from '../components/Filtering';
 import FullsearchList from '../components/FullsearchList';
+import  Link  from 'next/link';
 function Search() {
   let router= useRouter();
   const  pid  = router.asPath;
@@ -32,9 +33,11 @@ function Search() {
         </Head>
 
 
-        <main>
+        <div>
           <div className="fixed z-50 w-full pb-2 bg-gray-700/20 h-16 md:h-24 backdrop-blur-md"><div className='h-full  md:flex max-w-4xl w-[90%] justify-center  flex mt-1  md:mx-0  mx-auto '>
-          <div className='lg:ml-12 w-[80px]  md:w-[100px]  cursor-pointer scale-90 hover:opacity-95 '>      
+         <Link href="/">
+          <a>
+         <div className='lg:ml-12 w-[80px]  md:w-[100px] -mt-2  md:-mt-1 cursor-pointer scale-90 hover:opacity-95 '>      
       <Lottie
       onMouseOver={hoverevent}
       onMouseLeave={hovereventends}
@@ -43,11 +46,13 @@ function Search() {
              animationData={groovyWalkAnimation} 
              />
       </div>
+      </a>
+         </Link>
        <div className="w-full mt-2 md:mt-5"> <SearchEle inputDafultVal={val}  /></div>
         </div></div>
        
 
-        </main>
+        </div>
         <div className="pt-[65px] absolute top-0 md:pt-[100px]">
        <Filtering/>
       

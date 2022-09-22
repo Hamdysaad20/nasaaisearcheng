@@ -44,7 +44,12 @@ name='name'
 minLength={1} maxLength={90}
 required
 />
-<div     type="submit"   id = "go" 
+<div onClick={(e)=>{
+      e.preventDefault();
+
+  let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal ;
+  router.push(herf)
+}}      type="submit"   id = "go" 
  >
 
 <SearchIcon   />
