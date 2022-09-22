@@ -24,8 +24,8 @@ width={200}
 />
 </div>
 <div className="w-full pr-4  ">
-        <h1 className="text-xl text-gray-200 font-bold pt-4">{item.title}</h1>
-<div className="h-full break-words max-w-[170px]  md:max-w-[250px]">
+        <h1  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className="text-xl text-gray-200 font-bold pt-4">{item.title}</h1>
+<div  className="h-full break-words max-w-[170px]  md:max-w-[250px]">
 {item.description}
 </div>
         </div>   

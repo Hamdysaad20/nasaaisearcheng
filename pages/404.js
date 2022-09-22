@@ -2,9 +2,7 @@ import React from 'react'
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../public/Images/404.json";
 import Header from './../components/Header';
-import {useRouter} from"next/router"
 function Four0Foure() {
-  const router= useRouter();
   return (
     <div className="h-screen w-full ">
        <Header/>
