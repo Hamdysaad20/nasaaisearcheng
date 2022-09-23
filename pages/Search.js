@@ -1,14 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef ,useState} from 'react'
 import SearchEle from '../components/SearchEle' 
 import { useRouter } from 'next/router';
 import  Head  from 'next/head';
 import Lottie from "lottie-react";
-
 import groovyWalkAnimation from "../public/Images/nasa.json";
-
 import Filtering from '../components/Filtering';
 import FullsearchList from '../components/FullsearchList';
 import  Link  from 'next/link';
+import Featchdata from '../components/featchdata';
+
 function Search() {
   let router= useRouter();
   const  pid  = router.asPath;
@@ -22,6 +22,14 @@ function Search() {
     lottieRef.current.setSpeed(1)
 
    }
+
+
+   const [data, setdata] = useState("");
+
+   const getdatafromchild = num => {
+    // 👇️ take parameter passed from Child component
+    setdata(num);
+  };
 
    return (
     <div   className="text-white overflow-hidden overflow-y-auto">
@@ -48,16 +56,18 @@ function Search() {
       </div>
       </a>
          </Link>
-       <div className="w-full mt-2 md:mt-5"> <SearchEle inputDafultVal={val}  /></div>
+       <div className="w-full mt-2 md:mt-5"> <SearchEle getdatafromchild={getdatafromchild}  inputDafultVal={val}  /></div>
         </div></div>
        
 
         </div>
+
         <div className="pt-[65px] absolute top-0 md:pt-[100px]">
        <Filtering/>
-      
-       </div>      
-       <FullsearchList description={"We offer a dynamic mix of software solutions, consultancy and expert application development backed by over 30 years of maritime experience and focus – allowing ..."} Title={"Marc Sell\u00e9s Llim\u00f3s is the first american on the moon"}/>
+
+       </div>    
+
+       <FullsearchList val={val} dataFull={data}  description={"We offer a dynamic mix of software solutions, consultancy and expert application development backed by over 30 years of maritime experience and focus – allowing ..."} Title={"Marc Sell\u00e9s Llim\u00f3s is the first american on the moon"}/>
  
     </div>
   )

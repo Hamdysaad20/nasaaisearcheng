@@ -1,14 +1,16 @@
 import  useRouter  from 'next/router';
-import React ,{useState} from 'react'
+import React ,{useState } from 'react'
 import SearchIcon from './SearchIcon'
 
 
-function SearchEle(props) {
+function SearchEle(props,{getdatafromchild}) {
 const [inputDafultVal,setInputDefultval]= useState("")
 
 //redux-state
 
 let router= useRouter; 
+
+
 
 
 
@@ -27,9 +29,9 @@ let ru = "/Search?"
   
    <form onSubmit={(e)=>{
       e.preventDefault();
-
   let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal ;
   router.push(herf)
+
 }}      >
    <input   
     onChange={handleChange}

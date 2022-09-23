@@ -2,16 +2,20 @@ import React,{useState} from 'react'
 import ImagesSearchAll from './ImagesSearchAll'
 import FullDisplay from './FullDisplay';
 import { motion } from "framer-motion";
+import Featchdata from './Featchdata';
 
 function FullsearchList(props) {
     const [show, setShow]= useState(false)
-
+    let val =typeof props.val === "undefined" ? "" : props.val;
      
   return (
     <div>
         <div className="  w-full max-w-[1980px] h-screen">
             <div className=" max-w-[1380px] relative md:pt-28 md:ml-36 h-screen pt-32 px-1 ">
+            <Featchdata val={val}/>
+
                 <div  className=" font-thin text-gray-300">About {props.resultLength} results ({(Math.random() * 3).toFixed(2)} seconds) </div>
+           
             <div className="bg-gray-700/20  mt-2 backdrop-md w-full rounded-lg   max-h-32 ">
 <div className="p-1">
 <div className="">
@@ -23,6 +27,7 @@ function FullsearchList(props) {
 </div>
             </div>
 
+{props.dataFull}
 <div className="flex max-w-6xl pb-12 md:pb-4  overflow-hidden overflow-x-scroll">         
   <div onClick={()=>{
 
