@@ -12,17 +12,17 @@ function FullsearchList(props) {
         <div className="  w-full max-w-[1980px] h-screen">
             <div className=" max-w-[1380px] relative md:pt-28 md:ml-36 h-screen pt-32 px-1 ">
 
-                <div  className=" font-thin text-gray-300">About  results ({(Math.random() * 3).toFixed(2)} seconds) </div>
+                <div  className=" font-thin text-gray-300">About ({(Math.random() * 3086776).toFixed(2)} results)   ({(Math.random() * 3).toFixed(2)} seconds) </div>
            
 {props.dataFull.map((item, i) => (
 
 <div key={i} className="bg-gray-700/20  mt-2 backdrop-md w-full rounded-lg   max-h-32 ">
 <div className="p-1">
 <div className="">
-    <h1 style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="font-bold px-1 text-left text-xl md:text-2xl">{item.result.messageID || item.result.messageType  >50? item.result.messageID.slice(0,45)+".."||item.result.messageType.slice(0,45)+"..":item.result.messageType||item.result.messageID} </h1>
+    <h1 style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="font-bold px-1 text-left text-xl md:text-2xl">{item.result.messageID || typeof item.result.messageID ==="undefined"? "" : item.result.messageID.slice(0,45)+".."|| typeof item.result.messageType ==="undefined"?"": item.result.messageType.slice(0,45)+".."||item.result.messageID} </h1>
 </div>
 <div>
-    <p className="py-2 text-gray-300 font-normal	 text-ellipsis px-1">{item.result.messageBody.length>65? item.result.messageBody.slice(0,65)+"...":item.result.messageBody}</p>
+    <p className="py-2 text-gray-300 font-normal	 text-ellipsis px-1">{typeof item.result.messageBody ==="undefined" ?"" :item.result.messageBody.slice(0,65)+"..."}</p>
 </div>
 </div>
             </div>)

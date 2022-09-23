@@ -1,6 +1,8 @@
 module.exports = {
 	images: {
-		domains: ["earthengine.googleapis.com"],
+		domains: 
+		['earthengine.googleapis.com','apod.nasa.gov'], 
+		
 		formats: ["image/avif", "image/webp" ],
 
 	  },

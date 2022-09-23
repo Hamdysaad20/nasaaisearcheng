@@ -14,8 +14,8 @@ item.result.url ?(
         <div>
     <p style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="font-bold px-2 pt-2 text-left text-xl md:text-2xl">{props.Title.length>50?props.Title.slice(0,45)+"..":props.Title}</p>
 </div>
- </div>):null
-))):null}
+ </div>):""
+))):""}
  
 
 
