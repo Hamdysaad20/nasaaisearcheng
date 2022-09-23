@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import ImagesSearchAll from './ImagesSearchAll'
 import FullDisplay from './FullDisplay';
 import { motion } from "framer-motion";
-import Featchdata from './featchdata';
 
 function FullsearchList(props) {
     const [show, setShow]= useState(false)
@@ -12,27 +11,29 @@ function FullsearchList(props) {
     <div>
         <div className="  w-full max-w-[1980px] h-screen">
             <div className=" max-w-[1380px] relative md:pt-28 md:ml-36 h-screen pt-32 px-1 ">
-            <Featchdata val={val}/>
 
-                <div  className=" font-thin text-gray-300">About {props.resultLength} results ({(Math.random() * 3).toFixed(2)} seconds) </div>
+                <div  className=" font-thin text-gray-300">About  results ({(Math.random() * 3).toFixed(2)} seconds) </div>
            
-            <div className="bg-gray-700/20  mt-2 backdrop-md w-full rounded-lg   max-h-32 ">
+{props.dataFull.map((item, i) => (
+
+<div key={i} className="bg-gray-700/20  mt-2 backdrop-md w-full rounded-lg   max-h-32 ">
 <div className="p-1">
 <div className="">
-    <h1 style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="font-bold px-1 text-left text-xl md:text-2xl">{props.Title.length>50?props.Title.slice(0,45)+"..":props.Title}</h1>
+    <h1 style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="font-bold px-1 text-left text-xl md:text-2xl">{item.result.messageID || item.result.messageType  >50? item.result.messageID.slice(0,45)+".."||item.result.messageType.slice(0,45)+"..":item.result.messageType||item.result.messageID} </h1>
 </div>
 <div>
-    <p className="py-2 text-gray-300 font-normal	 text-ellipsis px-1">{props.description.length>65? props.description.slice(0,65)+"...":props.description}</p>
+    <p className="py-2 text-gray-300 font-normal	 text-ellipsis px-1">{item.result.messageBody.length>65? item.result.messageBody.slice(0,65)+"...":item.result.messageBody}</p>
 </div>
 </div>
-            </div>
+            </div>)
+)}
 
-{props.dataFull}
+
 <div className="flex max-w-6xl pb-12 md:pb-4  overflow-hidden overflow-x-scroll">         
   <div onClick={()=>{
 
     setShow(true)
-  }}>  <ImagesSearchAll show={show}  Title={"Marc Sell\u00e9s Llim\u00f3s is the first american on the moon"}/></div>
+  }}>  <ImagesSearchAll dataFull={props.dataFull} show={show}  Title={"Marc Sell\u00e9s Llim\u00f3s is the first american on the moon"}/></div>
  
          
 </div>

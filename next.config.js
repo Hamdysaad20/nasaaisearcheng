@@ -1,4 +1,10 @@
 module.exports = {
+	images: {
+		domains: ["earthengine.googleapis.com"],
+		formats: ["image/avif", "image/webp" ],
+
+	  },
+	
 	theme: {
 		extend: {
 		  zIndex: {

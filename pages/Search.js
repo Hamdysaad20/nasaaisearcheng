@@ -1,4 +1,4 @@
-import React, { useRef ,useState} from 'react'
+import React, { useEffect, useRef ,useState} from 'react'
 import SearchEle from '../components/SearchEle' 
 import { useRouter } from 'next/router';
 import  Head  from 'next/head';
@@ -7,12 +7,17 @@ import groovyWalkAnimation from "../public/Images/nasa.json";
 import Filtering from '../components/Filtering';
 import FullsearchList from '../components/FullsearchList';
 import  Link  from 'next/link';
+import Loader from"../components/LoadingComp"
 
 function Search() {
   let router= useRouter();
   const  pid  = router.asPath;
    let val = decodeURI( pid.slice(router.asPath.lastIndexOf("qqq=")+4));
    const lottieRef = useRef();
+   const [apidata,setApidata]= useState([])
+   const [isLoading, setLoading] = useState(false)
+// const [datareal,setDatareal]= useState("")
+
 
    function hoverevent(){
     lottieRef.current.setSpeed(7)
@@ -21,7 +26,22 @@ function Search() {
     lottieRef.current.setSpeed(1)
 
    }
+   let url ="http://192.168.8.100:3000/api?query="+val
 
+   useEffect(() => {
+    setLoading(true)
+    fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+        setApidata(data)
+        console.log(data)
+        setLoading(false)
+      }).catch(rejected => {
+        console.log(rejected);
+        setLoading(false)
+
+      })
+  },[])
 
    const [data, setdata] = useState("");
 
@@ -29,7 +49,8 @@ function Search() {
     // 👇️ take parameter passed from Child component
     setdata(num);
   };
-
+  if (isLoading) return <Loader/>
+  if (!apidata) return <p className="text-gray-200 text-2xl">No profile data</p>
    return (
     <div   className="text-white overflow-hidden overflow-y-auto">
       <Head>
@@ -66,8 +87,7 @@ function Search() {
 
        </div>    
 
-       <FullsearchList val={val} dataFull={data}  description={"We offer a dynamic mix of software solutions, consultancy and expert application development backed by over 30 years of maritime experience and focus – allowing ..."} Title={"Marc Sell\u00e9s Llim\u00f3s is the first american on the moon"}/>
- 
+       <FullsearchList val={val} dataFull={apidata}  description={"We offer a dynamic mix of software solutions, consultancy and expert application development backed by over 30 years of maritime experience and focus – allowing ..."} Title={"Marc Sell\u00e9s Llim\u00f3s is the first american on the moon"}/>
     </div>
   )
 }
