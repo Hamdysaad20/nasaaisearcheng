@@ -53,6 +53,7 @@ required
 
   let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal ;
   router.push(herf)
+  Featchdata();
 }}      type="submit"   id = "go" 
  >
 
