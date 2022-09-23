@@ -1,7 +1,7 @@
 import React,{useEffect ,useState} from 'react'
 import Lottie from "lottie-react";
 
-import groovyWalkAnimation from "../public/Images/weatherJson/4791-foggy.json";
+import groovyWalkAnimation from "../public/Images/weatherJson/4804-weather-sunny.json";
 function Weather() {
    const [weatherData,setWeatherData]= useState("")
    const [long,setLong]= useState()
@@ -46,7 +46,7 @@ console.log(response)
 
 
 
-  },[]);
+  },[lat,long]);
 
 
 

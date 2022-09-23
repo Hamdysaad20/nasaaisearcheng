@@ -1,5 +1,6 @@
 import  useRouter  from 'next/router';
 import React ,{useState } from 'react'
+import Featchdata from './featchdata';
 import SearchIcon from './SearchIcon'
 
 
@@ -31,6 +32,7 @@ let ru = "/Search?"
       e.preventDefault();
   let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal ;
   router.push(herf)
+  Featchdata()
 
 }}      >
    <input   

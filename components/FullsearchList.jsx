@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import ImagesSearchAll from './ImagesSearchAll'
 import FullDisplay from './FullDisplay';
 import { motion } from "framer-motion";
-import Featchdata from './Featchdata';
+import Featchdata from './featchdata';
 
 function FullsearchList(props) {
     const [show, setShow]= useState(false)
@@ -45,14 +45,14 @@ function FullsearchList(props) {
             animate='visible'
             variants={{
               hidden: {
-                scale: 1,
+                scale: 0.7,
                 opacity: 0.0,
               },
               visible: {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                  delay: 0.1,
+                  delay: 0.04,
                 },
               },
             }}>
