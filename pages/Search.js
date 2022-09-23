@@ -7,7 +7,6 @@ import groovyWalkAnimation from "../public/Images/nasa.json";
 import Filtering from '../components/Filtering';
 import FullsearchList from '../components/FullsearchList';
 import  Link  from 'next/link';
-import Featchdata from '../components/featchdata';
 
 function Search() {
   let router= useRouter();

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import useSWR from 'swr'
 import LoadingComp from './LoadingComp';
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
