@@ -45,7 +45,7 @@ function FullsearchList(props) {
             animate='visible'
             variants={{
               hidden: {
-                scale: 0.7,
+                scale: .7,
                 opacity: 0.0,
               },
               visible: {
