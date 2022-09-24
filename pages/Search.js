@@ -34,14 +34,14 @@ function Search() {
     .then((res) => res.json())
     .then((data) => {
         setApidata(data)
-        console.log(data)
+        console.log(data.data)
         setLoading(false)
       }).catch(rejected => {
         console.log(rejected);
         setLoading(false)
 
       })
-  },[])
+  },[val])
 
    const [data, setdata] = useState("");
 
