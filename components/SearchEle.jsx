@@ -29,7 +29,7 @@ let ru = "/Search?"
   
    <form onSubmit={(e)=>{
       e.preventDefault();
-  let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal +"&page=1" ;
+  let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+ inputDafultVal  ;
   router.push(herf)
 
 }}      >
@@ -49,7 +49,7 @@ required
 <div onClick={(e)=>{
       e.preventDefault();
 
-  let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal+"&page=1"  ;
+  let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal ;
   router.push(herf)
 }}      type="submit"   id = "go" 
  >

@@ -8,7 +8,8 @@ import MissDestants from './MissDestants';
 import { parse } from 'postcss';
 
 function FullsearchList(props) {
-  let count=1;  
+
+let [counter,setCounter]=useState(0)
   const [show, setShow]= useState(false)
     const router = useRouter()
     let val =typeof props.val === "undefined" ? "" : props.val;
@@ -34,8 +35,45 @@ if (typeof val === "undefined"){
 { isUndefinded(props.dataFull)?"": props.dataFull.map((item, i) => (
 
 <div>
+
+
+{item.result.absolute_magnitude_h? (
+<div className='bg-gray-700/20 px-2 overflow-hidden mt-2 backdrop-md w-full rounded-lg   max-h-80'>
+<div className='flex mx-auto justify-center text-2xl  '> Absolute Magnitude H  :  {item.result.absolute_magnitude_h}
+</div>
+<div className='flex mx-auto gap-2 justify-center'>
+Close Approach Date : <span className="text-red-400 font-light text-lg">{item.result.close_approach_data[0].close_approach_date}</span> 
+</div>
+<div className='flex mx-auto justify-center'>
+Epoch Date Close Approach : <span className="text-red-400 font-light text-lg"> { item.result.close_approach_data[0].epoch_date_close_approach}</span> 
+</div>
+<div className='flex mx-auto justify-center text-2xl'>feet</div>
+<div className='flex gap-2 mx-auto justify-center flex-wrap"'>
+<div>Estimated Diameter Max : <span className="text-red-400 font-light text-lg">{item.result.estimated_diameter.feet.estimated_diameter_max}</span> </div>
+<div> Estimated Diameter Min : <span className="text-red-400 font-light text-lg"> {item.result.estimated_diameter.feet.estimated_diameter_min}</span> </div>
+
+</div>
+
+<div className='flex mx-auto justify-center text-2xl'>kilometers</div>
+<div className='flex gap-2 mx-auto justify-center flex-wrap"'>
+<div>Estimated Diameter Max : <span className="text-red-400 font-light text-lg">{item.result.estimated_diameter.kilometers.estimated_diameter_max}</span> </div>
+<div> Estimated Diameter Min : <span className="text-red-400 font-light text-lg"> {item.result.estimated_diameter.kilometers.estimated_diameter_min}</span> </div>
+
+</div>
+<div className='flex mx-auto justify-center text-2xl'>meters</div>
+<div className='flex gap-2 mx-auto justify-center flex-wrap"'>
+
+<div>Estimated Diameter Max :  <span className="text-red-400 font-light text-lg">{item.result.estimated_diameter.meters.estimated_diameter_max}</span> </div>
+<div> Estimated Diameter Min : <span className="text-red-400 font-light text-lg">{item.result.estimated_diameter.meters.estimated_diameter_min}</span> </div>
+
+</div>
+</div>
+
+):""}
+
+
  {item.result.orbiting_body? (
- <div className='bg-gray-700/20 overflow-hidden mt-2 backdrop-md w-full rounded-lg   max-h-48'>
+ <div className='bg-gray-700/20 overflow-hidden mt-2 backdrop-md w-full rounded-lg   max-h-80'>
 <div className='flex mx-auto justify-center text-2xl  '>{item.result.orbiting_body}</div>
 <div className='flex justify-center mx-auto'>
 <div style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className='flex gap-2   justify-between max-w-3xl'>
@@ -64,10 +102,17 @@ parseInt(item.result.miss_distance.miles).toFixed(3)
 </div>
 
 </div>
+<div className='flex mx-auto justify-center text-2xl font-semibold'>Relative Velocity</div>
+<div className='flex justify-center mx-auto'>
+  
+  <div>Kilometers Per Hour :  <span className="text-red-400 font-light text-lg">  {parseInt(item.result.relative_velocity.kilometers_per_hour).toFixed(4)}</span></div>
+  <div> Kilometers Per Second :  <span className="text-red-400 font-light text-lg">   {parseInt(item.result.relative_velocity.kilometers_per_second).toFixed(4)}</span></div>
+  <div> Miles Per Hour : <span className="text-red-400 font-light text-lg">  {parseInt(item.result.relative_velocity.miles_per_hour).toFixed(4)} </span></div>
+</div>
  </div>
  ):""}
 
-<div key={i} className="bg-gray-700/20 overflow-hidden mt-2 backdrop-md w-full rounded-lg   max-h-32 ">
+<div key={i} className="bg-gray-700/20 px-2 overflow-hidden mt-2 backdrop-md w-full rounded-lg   max-h-32 ">
 <div className="p-1">
 <div className="">
  
@@ -132,11 +177,6 @@ parseInt(item.result.miss_distance.miles).toFixed(3)
       <div className='absolute flex justify-center mx-auto w-full bottom-12  '>
 
 
-   <Pagination onChange={()=>{
-   count++;
-   router.push(
-      router.asPath.replace(router.asPath.match(/&page=\d/),"&page="+count))
-   }} total={20}   />;
 
       </div>
     </div>
