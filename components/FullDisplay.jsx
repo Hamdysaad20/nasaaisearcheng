@@ -10,11 +10,7 @@ function  FullDisplay(props) {
         </div>
         <div className="grid place-content-center">
             <h1 className="text-xl">{props.date}</h1>
-            {props.date?
-            (
-                <h1>{props.date}</h1>
-            )
-            :null}
+           
         </div>
         </div>
     </div>
