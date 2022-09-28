@@ -96,7 +96,7 @@ const spaceArticlesImage = [
                     </div>
                     <div className="w-full pr-4 grid place-content-center ">
                             <h1  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className="text-xl text-gray-200 font-bold pt-4">{item.title.slice(0,80)}</h1>
-                    <div  className="h-full pb-2 opacity-60 text-gray-400 break-words max-w-[170px]  md:max-w-[250px]">
+                    <div  className="h-full pl-2 pb-2 opacity-60 text-gray-400 break-words max-w-[170px]  md:max-w-[250px]">
                     From : {item.source}
                     </div>
                             </div>   
