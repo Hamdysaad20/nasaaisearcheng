@@ -9,6 +9,7 @@ function Weather() {
    const [country,setCountry]= useState("")
    const [city,setCity]= useState("")
 
+
    useEffect(() => {
     navigator.geolocation.getCurrentPosition(function(position) {
         setLat(typeof position.coords.latitude ==="undefined"? parseFloat( position.coords.latitude) :parseFloat(29.31));
@@ -45,9 +46,12 @@ setCity(response.city)
 
           
 
+       
 
 
-  },[lat,long]);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
 
 
@@ -64,7 +68,7 @@ setCity(response.city)
              />
             </div>
              <div  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="text-gray-200  md:mt-[10%] flex flex-col h-[100%]  place-items-center">
-                <h1 className="mt-3 md:mt-1 drop-shadow-xl text-2xl	"> {typeof weatherData.elevation ==="undefined"?weatherData.elevation:32}<span className="text-red-400 opacity-50 animate-ping ">°C</span></h1>
+                <h1 className="mt-3 md:mt-1 drop-shadow-xl text-2xl	"> {typeof weatherData.elevation ==="undefined"?weatherData.elevation:(<p className="text-base">Looding... </p>)}<span className="text-red-400 opacity-50 animate-ping ">°C</span></h1>
                 <p className="hidden md:block">{city} ,{country}</p>
              </div>
              </div>
