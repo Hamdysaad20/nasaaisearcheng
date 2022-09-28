@@ -78,7 +78,11 @@ const spaceArticlesImage = [
     <div className="gap-2 pb-20 md:pb-40 flex-wrap   mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
  {news.sort(() => 0.5 - Math.random())
                   .map((item, i) => (
-<a  key={i}  herf={item.url}  target="_blank" rel="noreferrer noopener" className="overflow-hidden relative   bg-gray-700/20  justify-center mx-auto  text-gray-400 flex backdrop-blur-md cursor-pointer hover:scale-[1.02] shadow-lg duration-500   mt-2 w-[300px] md:w-[400px] rounded-md min-h-[160px]">
+<a  key={i}  herf={item.url}  target="_blank" onClick={()=>{
+ document.location.href = item.url;
+
+
+}} className="overflow-hidden relative   bg-gray-700/20  justify-center mx-auto  text-gray-400 flex backdrop-blur-md cursor-pointer hover:scale-[1.02] shadow-lg duration-500   mt-2 w-[300px] md:w-[400px] rounded-md min-h-[160px]">
                    
                   
                     <div className="h-[150px] relative  w-[150px] ">

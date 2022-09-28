@@ -76,7 +76,7 @@ setCity(response.city)
              />}
             </div>
              <div  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }}  className="text-gray-200  md:mt-[10%] flex flex-col h-[100%]  place-items-center">
-                <h1 className="mt-3 md:mt-1 drop-shadow-xl text-2xl	"> {typeof weatherData.elevation ==="undefined"?weatherData.elevation + (<span className="text-red-400 opacity-50 animate-ping ">°C</span>):(<p className="text-base">Looding... </p>)}</h1>
+                <h1 className="mt-3 md:mt-1 drop-shadow-xl text-2xl	"> {typeof weatherData.elevation ==="undefined"?(<p className="text-base">Looding... </p>):weatherData.elevation + (<span className="text-red-400 opacity-50 animate-ping ">°C</span>)}</h1>
                 <p className="hidden md:block">{typeof weatherData.timezone ==="undefined"?"":weatherData.timezone}<span>,</span>{country}</p>
              </div>
              </div>
