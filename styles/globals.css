@@ -352,3 +352,30 @@ to { box-shadow: 0 0 100px 15px #F4F6AD; }
 
 
 
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -15px linear-gradient(transparent, rgba(0,0,0,0));
+  font-size: 60px;
+  
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation:3s waviy 3s infinite ;
+  animation-delay:5s ;
+cursor: pointer;
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-5px)
+  }
+}

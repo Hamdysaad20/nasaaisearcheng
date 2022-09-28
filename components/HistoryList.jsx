@@ -1,5 +1,7 @@
 import React,{useEffect, useRef, useState} from 'react'
 import Image from "next/image"
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../public/Images/spaceArtic/smilefaceHeader.json";
 
   function HistoryList() {
     const dataFetchedRef = useRef(false);
@@ -46,10 +48,32 @@ const spaceArticlesImage = [
    function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
+
+  const lottieRef = useRef();
+
+  async function hoverevent(){
+   lottieRef.current.setSpeed(7)
+  }
+ async function hovereventends(){
+   lottieRef.current.setSpeed(1)
+
+  }
+
   return (
     <div className="h-[300px] relative mb-40  ">
 <div className=" h-full">
-<div style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className='text-2xl flex justify-center pt-6 text-white font-extrabold'>Today &apos;s Pickup</div>
+<div className=" waviy">
+<div style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400", lolss : 1,  }} className='text-2xl relative  flex justify-center pt-6 text-white font-extrabold'><span style={{ lolss:2}}>Today &apos;s Pickup </span><div className="relative  w-10">  <Lottie
+          className="absolute top-0"
+          onMouseOver={hoverevent}
+            onMouseLeave={hovereventends}
+            lottieRef={lottieRef}
+             animationData={groovyWalkAnimation} 
+             /></div></div>
+
+        
+  </div>
+
 
     <div className="gap-2 pb-20 md:pb-40 flex-wrap   mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
  {news.sort(() => 0.5 - Math.random())
