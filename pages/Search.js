@@ -7,7 +7,7 @@ import groovyWalkAnimation from "../public/Images/nasa.json";
 import Filtering from '../components/Filtering';
 import FullsearchList from '../components/FullsearchList';
 import  Link  from 'next/link';
-import Loader from"../components/LoadingComp"
+// import Loader from"../components/LoadingComp"
 
 function Search() {
   let router= useRouter();
@@ -16,7 +16,7 @@ function Search() {
    const lottieRef = useRef();
    const [apidata,setApidata]= useState([])
    const [isLoading, setLoading] = useState(false)
-// const [datareal,setDatareal]= useState("")
+   const dataFetchedRef = useRef(false);
 
 
    function hoverevent(){
@@ -29,6 +29,8 @@ function Search() {
    let url ="http://192.168.8.100:3000/api?query="+val
 
    useEffect(() => {
+    if (dataFetchedRef.current) return;
+    dataFetchedRef.current = true;
     setLoading(true)
     fetch(url)
     .then((res) => res.json())
@@ -41,7 +43,7 @@ function Search() {
         setLoading(false)
 
       })
-  },[val])
+  },[url])
 
    const [data, setdata] = useState("");
 
@@ -49,8 +51,9 @@ function Search() {
     // 👇️ take parameter passed from Child component
     setdata(num);
   };
-  if (isLoading) return <Loader/>
-  if (!apidata) return <p className="text-gray-200 text-2xl">No profile data</p>
+  // if (isLoading) return <Loader/>
+  // if (!apidata) return <p className="text-gray-200 text-2xl">No profile data</p>
+  
    return (
     <div   className="text-white overflow-hidden overflow-y-auto">
       <Head>

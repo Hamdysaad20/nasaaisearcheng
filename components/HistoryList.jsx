@@ -17,29 +17,11 @@ const spaceArticlesImage = [
 
 
 ]
-    const [data,setData]= useState("")
     const [news,setnews]= useState([])
 
    useEffect(()=>{
     if (dataFetchedRef.current) return;
     dataFetchedRef.current = true;
-
-    let date= "2022-09-24"
-let url = "https://api.nasa.gov/planetary/apod?api_key=Dtjmw7NijKcYv7JQWcjj7ciaK3qMbZacqfH0xN0U"+date
-    fetch(url)
-    .then(response => response.json())
-        .then(response =>{
-
-          setData(response)
-console.log(response)
-
-}
-        )
-        .catch(err => console.error( "there is an error"+ err.message));
-
-
-
-
 
         const options = {
           method: 'GET',
@@ -58,9 +40,6 @@ console.log(response)
           .catch(err => console.error(err));
 
 
-
-
-
    },[])
 
    
@@ -70,7 +49,7 @@ console.log(response)
   return (
     <div className="h-[300px] relative mb-40  ">
 <div className=" h-full">
-<div style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className='text-2xl flex justify-center pt-6 text-white font-extrabold'>Today's Pickup</div>
+<div style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className='text-2xl flex justify-center pt-6 text-white font-extrabold'>Today &apos;s Pickup</div>
 
     <div className="gap-2 pb-20 md:pb-40 flex-wrap   mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
  {news.sort(() => 0.5 - Math.random())

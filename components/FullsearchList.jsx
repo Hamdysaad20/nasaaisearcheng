@@ -1,29 +1,16 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import ImagesSearchAll from './ImagesSearchAll'
 import FullDisplay from './FullDisplay';
 import { motion } from "framer-motion";
-import { Pagination } from "@nextui-org/react";
-import { useRouter } from 'next/router'
-import MissDestants from './MissDestants';
-import { parse } from 'postcss';
+
 
 function FullsearchList(props) {
-
-let [counter,setCounter]=useState(0)
   const [show, setShow]= useState(false)
-    const router = useRouter()
-    let val =typeof props.val === "undefined" ? "" : props.val;
     function isUndefinded(val){
-if (typeof val === "undefined"){
-  return true;
-}else{
-  return false;
-}
-    }
-    let ru = "/Search?"
-    let qu="&page="
+if (typeof val === "undefined")return true;
 
-    let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+val+qu;
+    }
+
   return (
     <div>
         <div className="  w-full max-w-[1980px] h-screen">
@@ -34,7 +21,7 @@ if (typeof val === "undefined"){
 
 { isUndefinded(props.dataFull)?"": props.dataFull.map((item, i) => (
 
-<div>
+<div key={i} >
 
 
 {item.result.absolute_magnitude_h? (
