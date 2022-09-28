@@ -8,6 +8,14 @@ const spaceArticlesImage = [
  "/Images/spaceArtic/spaceartic1.png",
  "/Images/spaceArtic/spaceartic2.png",
  "/Images/spaceArtic/spaceartic3.png",
+ "/Images/spaceArtic/spaceartic4.png",
+ "/Images/spaceArtic/spaceartic5.png",
+ "/Images/spaceArtic/spaceartic6.png",
+ "/Images/spaceArtic/spaceartic7.png",
+ "/Images/spaceArtic/spaceartic8.png",
+ "/Images/spaceArtic/spaceartic9.png",
+
+
 ]
     const [data,setData]= useState("")
     const [news,setnews]= useState([])
@@ -60,35 +68,38 @@ console.log(response)
     return Math.floor(Math.random() * max);
   }
   return (
-    <div className="h-[300px] mb-12 ">
+    <div className="h-[300px] relative mb-40  ">
 <div className=" h-full">
 <div style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className='text-2xl flex justify-center pt-6 text-white font-extrabold'>Today's Pickup</div>
 
-    <div className="gap-2 pb-12 flex-wrap px-1 mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
+    <div className="gap-2 pb-20 md:pb-40 flex-wrap   mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
  {news.sort(() => 0.5 - Math.random())
                   .map((item, i) => (
-
-                    <div key={i} className="overflow-hidden bg-gray-700/20   text-gray-400 flex backdrop-blur-md cursor-pointer hover:scale-[1.02] shadow-lg duration-500  mt-2 w-[400px] rounded-md h-[160px]">
+<a  key={i}  herf={item.url}  target="_blank" rel="noreferrer noopener" className="overflow-hidden relative   bg-gray-700/20  justify-center mx-auto  text-gray-400 flex backdrop-blur-md cursor-pointer hover:scale-[1.02] shadow-lg duration-500   mt-2 w-[300px] md:w-[400px] rounded-md min-h-[160px]">
+                   
+                  
                     <div className="h-[150px] relative  w-[150px] ">
                     <div className="flex justify-center p-2 mt-4">
                     <Image          
                     
                     blurDataURL='data:...'
                placeholder='blur'
-             src={spaceArticlesImage[getRandomInt(3)]} alt={"image for the article number" +" "+ ++i}
+             src={spaceArticlesImage[getRandomInt(9)]} alt={"image for the article number" +" "+ ++i}
              height={300}
              width={300}
             />
             
                     </div>
                     </div>
-                    <div className="w-full pr-4  ">
-                            <h1  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className="text-xl text-gray-200 font-bold pt-4">{item.title}</h1>
-                    <div  className="h-full opacity-60 text-gray-400 break-words max-w-[170px]  md:max-w-[250px]">
+                    <div className="w-full pr-4 grid place-content-center ">
+                            <h1  style={{ fontFamily: "Poppins-Bold , SfproText" , width: "400" }} className="text-xl text-gray-200 font-bold pt-4">{item.title.slice(0,80)}</h1>
+                    <div  className="h-full pb-2 opacity-60 text-gray-400 break-words max-w-[170px]  md:max-w-[250px]">
                     From : {item.source}
                     </div>
                             </div>   
-                            </div>
+                           
+                                  
+                                    </a>
                   ))}
 
   
