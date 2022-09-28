@@ -16,7 +16,6 @@ function Search() {
    const lottieRef = useRef();
    const [apidata,setApidata]= useState([])
    const [isLoading, setLoading] = useState(false)
-   const dataFetchedRef = useRef(false);
 
 
    function hoverevent(){
@@ -29,9 +28,6 @@ function Search() {
    let url;
    useEffect(() => {
      url ="http://localhost:3006/api?query="+val
-
-    if (dataFetchedRef.current) return;
-    dataFetchedRef.current = true;
     setLoading(true)
     fetch(url)
     .then((res) => res.json())
@@ -47,8 +43,8 @@ function Search() {
   },[url,val])
 
 
-//    if (isLoading) return <Loader/>
-// if (!apidata) return <p className="text-gray-200 text-2xl">No profile data</p>
+   if (isLoading) return <Loader/>
+if (!apidata) return <p className="text-gray-200 text-2xl">No profile data</p>
   
    return (
     <div   className="text-white overflow-y-auto   overflow-hidden ">
