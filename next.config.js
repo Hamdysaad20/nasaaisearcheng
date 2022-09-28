@@ -1,11 +1,9 @@
 module.exports = {
-	images: {
-		domains: 
-		['apod.nasa.gov'], 
-		
-		formats: ["image/avif", "image/webp" ],
-
-	  },
+	reactStrictMode: true,
+	images : {
+		domains : ['apod.nasa.gov', 'nasa.gov' ]
+	  }
+	,
 	
 	theme: {
 		extend: {
@@ -14,7 +12,6 @@ module.exports = {
 		  }
 		}
 	  },
-	reactStrictMode: true,
 };
 const withPWA = require('next-pwa')({
   dest: 'public'
@@ -22,4 +19,7 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
 	reactStrictMode: true,
+	images : {
+		domains : ['apod.nasa.gov', 'localhost', ]
+	  }
 })

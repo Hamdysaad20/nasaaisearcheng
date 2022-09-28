@@ -1,6 +1,7 @@
 import  useRouter  from 'next/router';
 import React ,{useState } from 'react'
 import SearchIcon from './SearchIcon'
+import Router from 'next/router'
 
 
 function SearchEle(props,{getdatafromchild}) {
@@ -48,6 +49,7 @@ required
 />
 <div onClick={(e)=>{
       e.preventDefault();
+    
 
   let herf= ru+ "qqq"+"="+"("+"all"+")"+"qqq"+"="+inputDafultVal ;
   router.push(herf)

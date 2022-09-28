@@ -75,7 +75,7 @@ const spaceArticlesImage = [
   </div>
 
 
-    <div className="gap-2 pb-20 md:pb-40 flex-wrap   mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
+    <div className="gap-2 pb-20 md:pb-40 flex-wrap mt-7 min-h-[200px] max-w-7xl justify-center flex mx-auto"> 
  {news.sort(() => 0.5 - Math.random())
                   .map((item, i) => (
 <a  key={i}  herf={item.url}  target="_blank" onClick={()=>{

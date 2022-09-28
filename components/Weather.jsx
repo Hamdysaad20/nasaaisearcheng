@@ -11,7 +11,6 @@ function Weather() {
    const [long,setLong]= useState()
    const [lat,setLat]= useState()
    const [country,setCountry]= useState("")
-   const [city,setCity]= useState("")
 
 
    useEffect(() => {
@@ -43,7 +42,6 @@ console.log(response)
 
             setCountry(response.country_name)
 console.log(response)
-setCity(response.city)
 }
         )
         .catch(err => console.error( "there is an error"+ err.message));
