@@ -82,7 +82,7 @@ const spaceArticlesImage = [
  document.location.href = item.url;
 
 
-}} className="overflow-hidden relative   bg-gray-700/20  justify-center mx-auto  text-gray-400 flex backdrop-blur-md cursor-pointer hover:scale-[1.02] shadow-lg duration-500   mt-2 w-[300px] md:w-[400px] rounded-md min-h-[160px]">
+}} className="overflow-hidden relative   bg-gray-700/20  justify-center mx-auto  text-gray-400 flex backdrop-blur-md cursor-pointer hover:scale-[1.02] shadow-lg duration-500   mt-2 w-[300px] sm:w-[400px] rounded-md min-h-[160px]">
                    
                   
                     <div className="h-[150px] relative  w-[150px] ">
