@@ -27,7 +27,7 @@ function Search() {
    }
    let url;
    useEffect(() => {
-     url ="http://localhost:3006/api?query="+val
+     url ="https://nasa-ai-search-engine.cyclic.app/api?query="+val
     setLoading(true)
     fetch(url)
     .then((res) => res.json())
